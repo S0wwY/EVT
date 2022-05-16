@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Japanese Kitchen Etiquette</title>
+	<!--CSS-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--Botstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!--Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!--Favicon-->
+    <link rel="icon" href="logo/favicon.ico" type="image/ico" sizes="16x16">
+    <!--Script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+        $(function() {
+            var pull= $('#pull');
+                menu= $('nav ul');
+                menuHeight= menu.height();
+
+            $(pull).on('click', function(e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+
+            $(window).resize(function(){
+                var w = $(window).width();
+                if(w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="container-fluid">
+	<!--Header-->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-md-2">
+                    <a href="index.html">
+                        <img class="logo" src="./images/seventh_logo.webp" alt="My Japanese Kitchen" width="50" height="50" align="left">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-10">
+                    <nav class="clearfix">
+                        <ul class="nav nav-pills" class="clearfix">
+                            <li><a href="index.html">Home</a></li>
+                            <!-- <li><a href="about.html">About</a></li> -->
+                            <li><a href="directory.html">Recipes</a></li>
+                            <li><a href="etiquette.html">Etiquette</a></li>
+                            <!-- <li><a href="editor_choice.html">Editor's Choice</a></li> -->
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                        <a href="#" id="pull">Menu</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<main>
+    
+    <div class="etiquette">
+        <h2 style="margin: 30px;">Recipe</h2>
+        <div class="container">
+            <div class="row">
+                 <div class="col-xs-6 col-md-5">
+                    <div style="margin-left: 40px;">
+                        <img src="images/takoyaki.jpg" alt="japanese table" width="400" height="330">
+                    </div>
+                    <h4 style="margin-left: 40px; margin-top: 50px;">Description</h4>
+                    <p style="margin-left: 40px;">Transport yourself to the busy side streets and summer festivals of Japan with this great-tasting takoyaki recipe. Takoyaki are a kind of dumpling, made from grilled puffs of seasoned batter with a small piece of octopus meat in the middle, with sauces and seasonings scattered along the top. Serve these bite-size pieces of heaven at parties or enjoy them as warming snacks. Browse our takoyaki ingredients to shop for all you need to make this tasty treat.</p>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <h3>Ingredients</h3>
+                    <p>batter:<br>
+                        200g flour<br>
+                        2 eggs<br>
+                        450ml water<br>
+                        pinch of dashi stock powder<br><br>
+                        
+                        fillings:<br>
+                        100g fresh boiled octopus, chopped<br>
+                        1 bunch spring onion, chopped<br>
+                        red pickled ginger<br>
+                        tempura flakes<br><br>
+                        
+                        toppings:<br>
+                        takoyaki sauce.
+                    </p>
+                </div>
+                <div class="col-xs-6 col-md-4">
+                        <h3>Preparation</h3>
+                        <ol>
+                            <li>Make the batter: In a medium bowl, whisk together the egg, water, dashi stock powder, and flour until well incorporated. Transfer the batter to a squeeze bottle or spouted measuring cup for easy pouring.</li>
+                            <li>Preheat the takoyaki plate over medium heat for 2 minutes. Grease the holes with 1 tablespoon of vegetable oil. Fill each hole halfway with the batter. Place a piece of octopus in the center of each hole, then top with green onions, ginger, and tempura flakes. Cover with more batter (it’s okay if it overflows a bit) and cook for 2 minutes, until starting to turn golden brown. Use 2 takoyaki turners or chopsticks to turn the takoyaki ¾ of the way and cook for 2 minutes more, until the other side is starting to turn golden brown. Continue rotating and cooking the takoyaki until evenly golden brown on all sides. Drizzle the remaining tablespoon of vegetable oil over the takoyaki, flip over completely, and cook for 1 minute more on each side, until crispy and golden brown.</li>
+                            <li>Transfer the takoyaki to a plate and drizzle with takoyaki sauce and Japanese mayonnaise, then sprinkle with aonori and katsuobushi.</li>
+                            <li>Enjoy!</li>
+                        </ol></p>
+                </div> 
+            </div>
+    </div>
+</main>
+
+</body>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <ul class="nav nav-pills pull-left" id="social">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div id="copyright" align="right">
+                    <p>&copy; Хочу зачет пж corp.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
